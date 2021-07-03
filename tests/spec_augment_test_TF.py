@@ -50,7 +50,7 @@ if __name__ == "__main__":
                                                      hop_length=128,
                                                      fmax=8000)
 
-    # reshape spectrogram shape to [batch_size, time, frequency, 1]
+    # reshape spectrogram shape to [batch_size, frequency, time, 1]
     shape = mel_spectrogram.shape
     mel_spectrogram = np.reshape(mel_spectrogram, (-1, shape[0], shape[1], 1))
 
